@@ -1,0 +1,6 @@
+framework module Pods_gugudan {
+  umbrella header "Pods-gugudan-umbrella.h"
+
+  export *
+  module * { export * }
+}
