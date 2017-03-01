@@ -13,6 +13,7 @@ class GameLog: Object {
     dynamic var id:Int = 0
     dynamic var start_date:Date = Date()
     dynamic var end_date:Date = Date()
+    dynamic var totalTimeInterval:Int = 0
     
     let questionList = List<Question>()
     
@@ -28,6 +29,7 @@ class GameLog: Object {
             if let end = questionList.last?.end_date {
                 end_date = end
             }
+            totalTimeInterval = Int(time)
         }
     }
 

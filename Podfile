@@ -8,8 +8,8 @@ target 'gugudan' do
   # Pods for gugudan
 
   pod 'RealmSwift'
-  pod 'SwiftCharts'
   pod 'RandomKit'
+  pod 'SwiftCharts'
 
   target 'gugudanTests' do
     inherit! :search_paths

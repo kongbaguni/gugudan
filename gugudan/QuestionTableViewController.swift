@@ -12,7 +12,7 @@ import RealmSwift
 import RandomKit
 
 class QuestionTableViewController: UITableViewController {
-    var type = Question.QuestionType.더하기
+    var type:Question.QuestionType? = nil
     
     @IBOutlet var resultTimeLabel: UILabel!
     var gameLog:GameLog? = nil
@@ -58,15 +58,32 @@ class QuestionTableViewController: UITableViewController {
         }
         let q = Question()
         q.id = Int(q.start_date.timeIntervalSince1970)
-        q.questionType = type
+        if let type = self.type {
+            q.questionType = type
+        }
+        else {
+            let types:[Question.QuestionType] = [
+                Question.QuestionType.곱하기,
+                Question.QuestionType.나누기,
+                Question.QuestionType.더하기,
+                Question.QuestionType.빼기
+            ]
+            q.questionType = types[Int.random(within:0...3)]
+            
+        }
 
-        switch type {
+        let a = Int.random(within: 2...9)
+        let b = Int.random(within: 2...9)
+        switch q.questionType {
         case .곱하기, .더하기:
-            q.number1 = Int.random(within: 1...9)
-            q.number2 = Int.random(within: 1...9)
-        case .빼기, .나누기:
-            q.number1 = Int.random(within: 10...19)
-            q.number2 = Int.random(within: 1...9)
+            q.number1 = a
+            q.number2 = b
+        case .빼기:
+            q.number1 = a + b
+            q.number2 = b
+        case .나누기:
+            q.number1 = a * b
+            q.number2 = b
         }
         
         try! Realm().write {
@@ -151,14 +168,7 @@ class QuestionTableViewController: UITableViewController {
         }
         log.updateDate()
         resultTimeLabel.text = "\(Int(log.time))"
-        
-        if tableView.numberOfRows(inSection: 0) >= 1 {
-            if let cell = tableView.cellForRow(at: IndexPath(row: tableView.numberOfRows(inSection: 0)-1, section: 0)) as? QuestionTableViewCell {
-                cell.timeCheck()
-            }
-        }
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timeCheck), userInfo: nil, repeats: false)
-        
     }
     
 }

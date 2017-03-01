@@ -15,15 +15,7 @@ class QuestionTableViewCell: UITableViewCell {
     var targetVc:QuestionTableViewController? = nil
     @IBOutlet var accView:UIView!
     @IBOutlet var answerTextField: UITextField!
-    @IBOutlet var timeLabel:UILabel!
 
-    
-    func timeCheck() {
-        guard let question = self.question else {
-            return
-        }
-        timeLabel.text = "\(Int(question.time))"
-    }
     
     override func layoutSubviews() {
         super.layoutSubviews()

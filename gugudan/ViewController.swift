@@ -14,7 +14,7 @@ class HomeViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 0:
-            var type = Question.QuestionType.더하기
+            var type:Question.QuestionType? = nil
             switch indexPath.row {
             case 0:
                 type = .더하기
