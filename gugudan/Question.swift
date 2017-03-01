@@ -62,7 +62,7 @@ class Question: Object {
         }
         let att = NSMutableAttributedString()
 
-        att.append(NSAttributedString(string: "\(number1)", attributes:[
+        att.append(NSAttributedString(string: " \(number1)", attributes:[
             NSFontAttributeName:UIFont.systemFont(ofSize:30)
             ]))
         att.append(NSAttributedString(string: str))
@@ -70,7 +70,17 @@ class Question: Object {
             NSFontAttributeName:UIFont.systemFont(ofSize:30)
             ]))
         att.append(NSAttributedString(string: " = "))
+        
+        
+        
         return att
+    }
+    var time:TimeInterval {
+        let time = end_date.timeIntervalSince1970 - start_date.timeIntervalSince1970
+        if time == 0 {
+            return Date().timeIntervalSince1970 - start_date.timeIntervalSince1970
+        }
+        return time
     }
     
     func check() {
