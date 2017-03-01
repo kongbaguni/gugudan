@@ -17,6 +17,10 @@
 		C1C1C7771E6184EB007A7EDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1C1C7751E6184EB007A7EDB /* LaunchScreen.storyboard */; };
 		C1C1C7821E6184EB007A7EDB /* gugudanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1C7811E6184EB007A7EDB /* gugudanTests.swift */; };
 		C1C1C78D1E6184EB007A7EDB /* gugudanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1C78C1E6184EB007A7EDB /* gugudanUITests.swift */; };
+		C1C1C79C1E619971007A7EDB /* GameLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1C79B1E619970007A7EDB /* GameLog.swift */; };
+		C1E439721E62DE560066C7E1 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E439711E62DE560066C7E1 /* QuestionTableViewCell.swift */; };
+		C1EFC81E1E619D5400E2AD5C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EFC81D1E619D5400E2AD5C /* Question.swift */; };
+		C1EFC8201E61A4C100E2AD5C /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EFC81F1E61A4C100E2AD5C /* QuestionTableViewController.swift */; };
 		D4B7B7C03FE951404BDCE760 /* Pods_gugudanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE04A8F4A1A36877DEB6441 /* Pods_gugudanUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +63,10 @@
 		C1C1C7881E6184EB007A7EDB /* gugudanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gugudanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C1C78C1E6184EB007A7EDB /* gugudanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gugudanUITests.swift; sourceTree = "<group>"; };
 		C1C1C78E1E6184EB007A7EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1C1C79B1E619970007A7EDB /* GameLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLog.swift; sourceTree = "<group>"; };
+		C1E439711E62DE560066C7E1 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		C1EFC81D1E619D5400E2AD5C /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		C1EFC81F1E61A4C100E2AD5C /* QuestionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		EE8CD77CC1325AC4C507F56B /* Pods-gugudan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gugudan.release.xcconfig"; path = "Pods/Target Support Files/Pods-gugudan/Pods-gugudan.release.xcconfig"; sourceTree = "<group>"; };
 		FD7BFFA8AEC7E4264F31CA16 /* Pods-gugudan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gugudan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gugudan/Pods-gugudan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,9 +137,12 @@
 		C1C1C7681E6184EB007A7EDB /* gugudan */ = {
 			isa = PBXGroup;
 			children = (
+				C1C1C79A1E619913007A7EDB /* model */,
 				C1C1C7691E6184EB007A7EDB /* AppDelegate.swift */,
 				C1C1C76B1E6184EB007A7EDB /* ViewController.swift */,
 				C1C1C76D1E6184EB007A7EDB /* Main.storyboard */,
+				C1EFC81F1E61A4C100E2AD5C /* QuestionTableViewController.swift */,
+				C1E439711E62DE560066C7E1 /* QuestionTableViewCell.swift */,
 				C1C1C7731E6184EB007A7EDB /* Assets.xcassets */,
 				C1C1C7751E6184EB007A7EDB /* LaunchScreen.storyboard */,
 				C1C1C7781E6184EB007A7EDB /* Info.plist */,
@@ -156,6 +167,15 @@
 				C1C1C78E1E6184EB007A7EDB /* Info.plist */,
 			);
 			path = gugudanUITests;
+			sourceTree = "<group>";
+		};
+		C1C1C79A1E619913007A7EDB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C1C1C79B1E619970007A7EDB /* GameLog.swift */,
+				C1EFC81D1E619D5400E2AD5C /* Question.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 		E5BAC34B9C0B78FDC7829D4F /* Frameworks */ = {
@@ -452,9 +472,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1EFC81E1E619D5400E2AD5C /* Question.swift in Sources */,
+				C1EFC8201E61A4C100E2AD5C /* QuestionTableViewController.swift in Sources */,
+				C1C1C79C1E619971007A7EDB /* GameLog.swift in Sources */,
 				C1C1C7721E6184EB007A7EDB /* gugudan.xcdatamodeld in Sources */,
 				C1C1C76C1E6184EB007A7EDB /* ViewController.swift in Sources */,
 				C1C1C76A1E6184EB007A7EDB /* AppDelegate.swift in Sources */,
+				C1E439721E62DE560066C7E1 /* QuestionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,6 +733,7 @@
 				C1C1C7931E6184EC007A7EDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1C1C7941E6184EC007A7EDB /* Build configuration list for PBXNativeTarget "gugudanTests" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +742,7 @@
 				C1C1C7961E6184EC007A7EDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1C1C7971E6184EC007A7EDB /* Build configuration list for PBXNativeTarget "gugudanUITests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +751,7 @@
 				C1C1C7991E6184EC007A7EDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

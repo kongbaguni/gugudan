@@ -1,20 +1,26 @@
 PODS:
+  - RandomKit (3.0.0):
+    - ShiftOperations
   - Realm (2.4.3):
     - Realm/Headers (= 2.4.3)
   - Realm/Headers (2.4.3)
   - RealmSwift (2.4.3):
     - Realm (= 2.4.3)
+  - ShiftOperations (1.0.0)
   - SwiftCharts (0.5.1)
 
 DEPENDENCIES:
+  - RandomKit
   - RealmSwift
   - SwiftCharts
 
 SPEC CHECKSUMS:
+  RandomKit: 03b4be99ecc35850b794e0185689931d72024e93
   Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
   RealmSwift: 30d49739ccb3385d201242736ca4dda56aec9dfc
+  ShiftOperations: 0c77c06851e7976c2665d601b46af123dbffeade
   SwiftCharts: d263289cdc7fc955fef54ae3bc6529f696e69933
 
-PODFILE CHECKSUM: a57a6cece8cfa6f89a96b4e3796728416b849a1d
+PODFILE CHECKSUM: 1f5da952bcc7531de70f2751512442a9ec5c4d1e
 
 COCOAPODS: 1.2.0
